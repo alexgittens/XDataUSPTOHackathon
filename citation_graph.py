@@ -28,7 +28,10 @@ class citation_graph(object):
 
         # Read the data frame in.
         print 'Unpickling...'
-        df = pd.read_pickle( picklefile )
+        try:
+            df = pd.read_pickle( picklefile )
+        except TypeError:
+            df = picklefile
         print 'done.'
         nrows = len(df)
         # Vertex and edge counters.
