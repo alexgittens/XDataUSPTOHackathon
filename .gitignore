@@ -1,3 +1,4 @@
 *.pickle
 *.h5
 .ipynb_checkpoints/*
+*.pyc

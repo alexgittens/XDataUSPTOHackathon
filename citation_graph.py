@@ -32,6 +32,7 @@ class citation_graph(object):
             df = pd.read_pickle( picklefile )
         except TypeError:
             df = picklefile
+        df.reset_index(inplace=True,drop=True)
         print 'done.'
         nrows = len(df)
         # Vertex and edge counters.
